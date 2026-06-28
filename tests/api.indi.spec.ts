@@ -31,44 +31,44 @@ async function createUser(apiHelper:any){
 //Test 1: Create a user test + verify: AAA
 //POST ---> userId --> GET /userId -- verify
 
-test.skip('PUT--Update user data', async({apiHelper})=>{
-    let userResponse= await createUser(apiHelper);
+// test.skip('PUT--Update user data', async({apiHelper})=>{
+//     let userResponse= await createUser(apiHelper);
 
-    let updatedUserData={
-        name: 'Testautomation1',
-        email: `test1${Date.now()}@tom.com`,
-        gender: 'male',
-        status: 'inactive'
-    }
+//     let updatedUserData={
+//         name: 'Testautomation1',
+//         email: `test1${Date.now()}@tom.com`,
+//         gender: 'male',
+//         status: 'inactive'
+//     }
 
-    //update the user
-    let response= await apiHelper.put(`/public/v2/users/${userResponse.id}`, updatedUserData, AuthHeader);
-    expect(response.status()).toBe(200);
-    expect(response.body.name).toBe(updatedUserData.name);
-    expect(response.body.status).toBe(updatedUserData.status);
-
-
-    //Get user
-    let getresponse= await apiHelper.get(`/public/v2/users/${userResponse.id}`, AuthHeader);
-    expect(getresponse.status()).toBe(200);
-    expect(getresponse.body.name).toBe(updatedUserData.name);
-});
+//     //update the user
+//     let response= await apiHelper.put(`/public/v2/users/${userResponse.id}`, updatedUserData, AuthHeader);
+//     expect(response.status()).toBe(200);
+//     expect(response.body.name).toBe(updatedUserData.name);
+//     expect(response.body.status).toBe(updatedUserData.status);
 
 
-//Test 3: Delete a user test + verify: AAA
-//POST ---> userId --> DELETE(204) --> GET /userId -- verify(404)
+//     //Get user
+//     let getresponse= await apiHelper.get(`/public/v2/users/${userResponse.id}`, AuthHeader);
+//     expect(getresponse.status()).toBe(200);
+//     expect(getresponse.body.name).toBe(updatedUserData.name);
+// });
 
-test.skip('Delete-- user data', async({apiHelper})=>{
-    let userResponse= await createUser(apiHelper);
 
-    //delete the user
-    let response= await apiHelper.delete(`/public/v2/users${userResponse.id}`, AuthHeader);
-    expect(response.status).toBe(204);
+// //Test 3: Delete a user test + verify: AAA
+// //POST ---> userId --> DELETE(204) --> GET /userId -- verify(404)
 
-    //get user
+// test.skip('Delete-- user data', async({apiHelper})=>{
+//     let userResponse= await createUser(apiHelper);
 
-    let getresponse= await apiHelper.delete(`/public/v2/users${userResponse.id}`, AuthHeader);
-    expect(response.status).toBe(404);
-    expect(response.body.message).toBe('Resource not found');
+//     //delete the user
+//     let response= await apiHelper.delete(`/public/v2/users${userResponse.id}`, AuthHeader);
+//     expect(response.status).toBe(204);
 
-});
+//     //get user
+
+//     let getresponse= await apiHelper.delete(`/public/v2/users${userResponse.id}`, AuthHeader);
+//     expect(response.status).toBe(404);
+//     expect(response.body.message).toBe('Resource not found');
+
+// });
