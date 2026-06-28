@@ -1,0 +1,19 @@
+
+
+
+[
+    {
+        "username": "abcd@gamil.com",
+        "password": "Test@123"
+    },
+
+    {
+        "username": "wrong@gamil.com",
+        "password": "T@123"
+    },
+
+    {
+        "username": "56@gamil.com",
+        "password": "tyu@123"
+    }
+]
