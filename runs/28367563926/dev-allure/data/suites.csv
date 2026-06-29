@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3","logout link exist @smoke","chromium","2026-06-29","failed","2026-06-29","","homePage.spec.ts","",""
+"","2","home page title test @smoke","chromium","2026-06-29","failed","2026-06-29","","homePage.spec.ts","",""
+"","2","home page level 2 headers @smoke","chromium","2026-06-29","failed","2026-06-29","","homePage.spec.ts","",""
