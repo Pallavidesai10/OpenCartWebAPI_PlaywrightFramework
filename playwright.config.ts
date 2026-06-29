@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 
-const ENV= process.env.ENV || "dev";
+const ENV= process.env.ENV || "qa";
 dotenv.config({path: `config/.env.${ENV}`});
 
 export default defineConfig({
